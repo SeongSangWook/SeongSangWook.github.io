@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*170919 NTS 02*/
+@keyframes is_moving{0%{transform:translateX(0)}100%{transform:translateX(40px)}}
+@keyframes is_staying{0%,100%{transform:translateX(40px)}}
+@keyframes is_going_back{0%{transform:translateX(40px)}100%{transform:translateX(0)}}
+.rb_push {position:relative;width:332px;height:150px;box-sizing:border-box;border:1px solid #e3e7ee;font-family:"돋움",Dotum,sans-serif;background-color:#fff;}
+.rb_push .rp_push_a{display:block;width:100%;height:100%;padding:16px 15px;box-sizing:border-box;text-decoration:none;}
+.rb_push .rp_push_a:hover{text-decoration:underline;color:#222;}
+.rb_push .rp_thumb_wrap{position:absolute;top:16px;left:15px;width:116px;height:116px;}
+.rb_push .rp_thumb{display:block;width:100%;height:100%;}
+.rb_push .rp_thumb_wrap::after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;border:1px solid rgba(0,0,0,0.1);}
+.rb_push .rp_text_wrap{width:100%;height:116px;padding:6px 0 0 131px;box-sizing:border-box;}
+.rb_push .rp_title{display:block;padding-bottom:8px;font-size:14px;line-height:17px;letter-spacing:-0.1em;font-style:normal;font-weight:700;color:#000;white-space:nowrap;}
+.rb_push .rp_dsc{margin:0;padding-top:10px;border-top:1px solid #ebeef3;}
+.rb_push .rp_dsc_line{display:block;font-size:12px;line-height:15px;letter-spacing:-0.04em;color:#444;white-space:nowrap;}
+.rb_push .rp_dsc_line+.rp_dsc_line{padding-top:3px;}
+.rb_push .rp_link_buy{display:block;padding-top:6px;text-decoration:none;font-size:12px;line-height:15px;letter-spacing:-0.04em;color:#888;}
+.rb_push .rp_link_buy::after{content:'';display:inline-block;width:5px;height:7px;margin-left:5px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAYAAADAp4fuAAAALElEQVQImWOcOXPmfwYIYITSDExInP/IggzoEjBBFAlkQbjZTOgCMO0YtgMACLgI2VTMc3IAAAAASUVORK5CYII=) 0 0 no-repeat;vertical-align:1px;}
+.rb_push .rp_label_wrap{position:absolute;bottom:13px;right:11px;}
+.rb_push .rp_label_wrap::after{content:'';display:table;clear:both;}
+.rb_push .rp_label_ad{display:block;float:left;}
+.rb_push .rp_label_client{display:block;float:left;margin-left:5px;margin-top:1px;font-size:12px;line-height:15px;letter-spacing:-0.04em;color:#888;white-space:nowrap;}
+.rb_push.is_animated{animation:is_moving 0.5s 1.5s ease-out, is_staying 0.3s 2s ease-in-out, is_going_back 0.5s 2.3s ease-in;}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://nv.veta.naver.com/fxshow?su=SU10078&nrefreshx=0 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>NAVER</title>
+    <link rel="stylesheet" type="text/css" href="./common.min.css">
+    <link rel="stylesheet" type="text/css" href="./rollingboard_push_332.css">
+    <style type="text/css">
+        /* DA Alternative - Contents Style */
+        /* DA Alternative - Contents Style */
+        #addiv{position:relative}
+        #addiv embed,#addiv object{z-index:20}
+        #addiv #da_alt{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}
+        #addiv #da_alt.on{z-index:30}
+        #addiv #da_alt a{display:block;overflow:hidden;position:absolute;bottom:0;left:0;width:100%;height:100%}
+        #addiv #da_alt .guide{visibility:hidden;position:absolute;top:50%;left:50%;width:154px;height:58px;margin:-29px 0 0 -77px;background:url(https://ssl.pstatic.net/tveta/libs/res/www/common/info/da_access.png)}
+        #addiv #da_alt.on .guide{visibility:visible}
+    </style>
+<script type="text/javascript" src="./jquery-1.8.0.min.js.다운로드"></script><script type="text/javascript" src="./CSSPlugin.min.js.다운로드"></script><script type="text/javascript" src="./EasePack.min.js.다운로드"></script><script type="text/javascript" src="./TweenLite.min.js.다운로드"></script><script type="text/javascript" src="./rollingboard_push_332.min.js.다운로드"></script></head>
+<body onload="lazyLoading()" marginwidth="0" marginheight="0">
+<div id="addiv"></div>
+
+<script type="text/template" id="basicPlayerTmpl">
+    <div class="rb_push" data-role="pushWrapper">
+    <a href="{{clickLink}}" target="_blank" class="rp_push_a">
+        <div class="rp_thumb_wrap">
+            <img class="rp_thumb" src="{{bgImgSrc}}" width="116" height="116" alt="">
+        </div>
+        <div class="rp_text_wrap">
+            <em class="rp_title">{{mainText}}</em>
+            <p class="rp_dsc">
+                <span class="rp_dsc_line">{{subText1}}</span>
+                <span class="rp_dsc_line">{{subText2}}</span>
+            </p>
+            <span class="rp_link_buy">{{textTypes}}</span>
+        </div>
+        <div class="rp_label_wrap">
+            <img class="rp_label_ad" src="https://ssl.pstatic.net/tveta/libs/res/www/rollingboard/push/img/ad.png" width="27" height="16" alt="AD" aria-label="광고">
+            <span class="rp_label_client">{{brandText}}</span>
+        </div>
+    </a>
+</div>
+</script>
+
+<script type="text/javascript" src="./pc.veta.core.min.js(2).다운로드"></script>
+<script type="text/javascript">
+    try {
+        document.domain = "naver.com";
+    } catch (e) {}
+
+
+    function lazyLoading() {
+        var sImageserver = "https://ssl.pstatic.net/tveta/libs";
+
+        loadScripts([
+            sImageserver + "/external/js/jquery-1.8.0.min.js?20170106",
+            sImageserver + "/external/js/CSSPlugin.min.js?20170106",
+            sImageserver + "/external/js/EasePack.min.js?20170106",
+            sImageserver + "/external/js/TweenLite.min.js?20170106",
+            ":::ENV:::" === "dev" ?
+                sImageserver + "/assets/js/pc/main/rollingboard_push_332.js?20180604"
+                : sImageserver + "/assets/js/pc/main/min/rollingboard_push_332.min.js?20180604"
+        ], function() {
+            // ACK IMP
+            new Nimp(["https://nv.veta.naver.com/fxview?eu=EU10000119&calp=-&oj=bbC87fref33rj2dgUP792lLcHkh6aJGpOBZLuyhf3XiMBpVhfNXdyYbdkqNS1hCXAEIG5zmhjjEdiFp1UfR8SGzITLUJmyQh&ac=7840845&src=3835217&evtcd=P100&x_ti=969&tb=&oid=&sid1=&sid2=&rk=7b370ffd830e4bd03db67fc2ab675a05&eltts=EzwscbGzCJU9VJBuHZSoBg%3D%3D&brs=Y&&eid=V800"]).log(1);
+            initAd();
+        });
+    }
+
+    function loadScripts(urlArr, callback) {
+        var loadingCount = 0;
+        var resourceCnt = urlArr.length;
+
+        for(var i in urlArr) {
+            naver_corp_da.loadScript(urlArr[i], function() {
+                loadingCount++;
+                if(loadingCount === resourceCnt) callback();
+            });
+        }
+    }
+
+    function initAd() {
+        var textTypes = {
+            NWBTN1: "더 알아보기",
+            NWBTN2: "더 알아보기",
+            NWBTN3: "참여하기",
+            NWBTN4: "참여하기",
+            NWBTN5: "구매하기",
+            NWBTN6: "상세보기"
+        };
+
+        var info = {
+            cssSrc: ":::ENV:::" === "dev" ?
+                "https://ssl.pstatic.net/tveta/libs/assets/css/pc/main/rollingboard_push_332.css?20171124"
+                : "https://ssl.pstatic.net/tveta/libs/assets/css/pc/main/min/rollingboard_push_332.min.css?20171124",
+            adInfoImgSrc: "https://ssl.pstatic.net/tveta/libs/res/www/common/info/da_access.png",
+            basicPlayer: {
+                creativeData: {
+                    bgImgSrc: "https://ssl.pstatic.net/tveta/libs/1239/1239296/ebbf2d32e3d77af36015_20190503153754279.jpg",
+                    clickLink: "https://nv.veta.naver.com/fxclick?eu=EU10000119&calp=-&oj=bbC87fref33rj2dgUP792lLcHkh6aJGpOBZLuyhf3XiMBpVhfNXdyYbdkqNS1hCXAEIG5zmhjjEdiFp1UfR8SGzITLUJmyQh&ac=7840845&src=3835217&br=2894269&evtcd=P901&x_ti=969&tb=&oid=&sid1=&sid2=&rk=7b370ffd830e4bd03db67fc2ab675a05&eltts=EzwscbGzCJU9VJBuHZSoBg%3D%3D&lu=&brs=Y&",
+                    brandText: "네이버쇼핑",
+                    mainText: "삼겹엔 미나리~",
+                    subText1: "향긋하고 아삭한",
+                    subText2: "봄 청도 미나리에요!",
+                    altText: "[광고]네이버쇼핑 삼겹엔 미나리~ 향긋하고 아삭한 봄 청도 미나리에요!",
+                    textTypes: textTypes["NWBTN1"]
+                }
+            },
+            noSupport: {
+                creativeData: {
+                    bgImgSrc: "https://ssl.pstatic.net/tveta/libs/1239/1239296/ebbf2d32e3d77af36015_20190503153754279.jpg",
+                    clickLink: "https://nv.veta.naver.com/fxclick?eu=EU10000119&calp=-&oj=bbC87fref33rj2dgUP792lLcHkh6aJGpOBZLuyhf3XiMBpVhfNXdyYbdkqNS1hCXAEIG5zmhjjEdiFp1UfR8SGzITLUJmyQh&ac=7840845&src=3835217&br=2894269&evtcd=P901&x_ti=969&tb=&oid=&sid1=&sid2=&rk=7b370ffd830e4bd03db67fc2ab675a05&eltts=EzwscbGzCJU9VJBuHZSoBg%3D%3D&lu=&brs=Y&",
+                    altText: "네이버쇼핑"
+                }
+            }
+        };
+        var autoplay = new RollingBoardPush(info);
+        autoplay.initAd();
+    }
+</script>
+
+<div style="display: none;"></div></body></html>

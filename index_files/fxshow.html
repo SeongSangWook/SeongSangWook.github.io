@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://nv.veta.naver.com/fxshow?su=SU10079&nrefreshx=0 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>NAVER</title>
+<link rel="stylesheet" type="text/css" href="./timeboard.min.css">
+<script type="text/javascript" src="./pc.veta.core.min.js(1).다운로드"></script>
+</head>
+<body onload="initAd()" marginwidth="0" marginheight="0">
+	<div id="da_timeboard">
+		<div class="content">
+			<div id="addiv" class="ad">
+				<a href="https://nv.veta.naver.com/fxclick?eu=EU10000120&amp;calp=-&amp;oj=bbC87fref323VyLQuD3ZS1LcHkh6aJGpOBZLuyhf3XiMBpVhfNXdyYbdkqNS1hCXAEIG5zmhjjEdiFp1UfR8SGzITLUJmyQh&amp;ac=7843522&amp;src=3840710&amp;br=2896988&amp;evtcd=P901&amp;x_ti=837&amp;tb=&amp;oid=&amp;sid1=&amp;sid2=&amp;rk=488c475768f55f368a766d49f42c21bc&amp;eltts=EzwscbGzCJU9VJBuHZSoBg%3D%3D&amp;lu=&amp;brs=Y&amp;" id="ac_banner_a" target="_blank">
+					<img src="./d18a62026fac78721084_20190508152903088.jpg" width="740" height="120" title="" alt="[광고]짜릿한 액션을 즐겨라! 킹 오브 파이터 올스타 지금 다운로드 넷마블 킹오브파이터올스타 그랜드 오픈" border="0">
+				<div id="da_access" style="position: absolute; top: 50%; left: 50%; width: 154px; height: 58px; margin: -29px 0px 0px -77px; background: url(&quot;https://ssl.pstatic.net/tveta/libs/res/www/common/info/da_access.png&quot;); display: none;"></div></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	document.domain = "naver.com";
+
+	function initAd() {
+		// ACK IMP
+		new Nimp(["https://nv.veta.naver.com/fxview?eu=EU10000120&calp=-&oj=bbC87fref323VyLQuD3ZS1LcHkh6aJGpOBZLuyhf3XiMBpVhfNXdyYbdkqNS1hCXAEIG5zmhjjEdiFp1UfR8SGzITLUJmyQh&ac=7843522&src=3840710&evtcd=P100&x_ti=837&tb=&oid=&sid1=&sid2=&rk=488c475768f55f368a766d49f42c21bc&eltts=EzwscbGzCJU9VJBuHZSoBg%3D%3D&brs=Y&&eid=V800"]).log(1);
+
+		initAltForImage();
+	}
+
+	function initAltForImage() {
+		// DA Alternative - Create Access Layer
+		var accessLayer = document.createElement('div');
+		accessLayer.setAttribute('id', 'da_access');
+		accessLayer.style.cssText = 'position:absolute;top:50%;left:50%;width:154px;height:58px;margin:-29px 0 0 -77px;background:url(https://ssl.pstatic.net/tveta/libs/res/www/common/info/da_access.png)';
+		accessLayer.style.display = "none";
+		var oAdDiv = document.getElementById("ac_banner_a");
+		oAdDiv.appendChild(accessLayer);
+
+		// DA Alternative - Focus Action
+		var altLink = document.getElementById("ac_banner_a");
+		var bMousedown = false;
+		altLink.onmousedown = function() {
+			bMousedown = true;
+		};
+		altLink.onfocus = function() {
+			if (!bMousedown) {
+				accessLayer.style.display = "block";
+			}
+		};
+		altLink.onblur = function() {
+			accessLayer.style.display = "none";
+		};
+	}
+	</script>
+
+<div style="display: none;"></div></body></html>
